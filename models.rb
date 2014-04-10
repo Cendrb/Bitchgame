@@ -11,6 +11,19 @@ class Entity
     @luck = params[:luck]
     @alive = true
   end
+  
+  def status
+    stats = []
+    stats << border
+    stats << @name
+    stats << "HP: #{@health}"
+    stats << "Attack: #{@attack}"
+    stats << "Defense: #{@defense}"
+    stats << "Energy: #{@energy}"
+    stats << "Luck: #{@luck}"
+    stats << border
+    stats
+  end
 
   def defend(attacker, attack_strength)
     say "I was attacked by #{attacker.name}"
