@@ -23,7 +23,6 @@ class Entity
     end
     @health -= result
     if @health < 0
-      @alive = false
       die(attacker)
     end
   end
@@ -52,6 +51,7 @@ class Entity
 
   def die(reason)
     say "I was killed by #{reason.to_s}"
+    @alive = false
   end
 
   def to_s
