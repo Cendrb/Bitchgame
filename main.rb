@@ -4,8 +4,8 @@ require './helpers.rb'
 class Game
   attr_reader :version, :name, :player
   def initialize
-     @version = '0.1'
-     @name = 'AD Game'
+     @version = '16.6.69'
+     @name = 'The Hunting Party'
      print "Starting #{@name} version #{@version}"
   end
   
